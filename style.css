@@ -1,0 +1,55 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  padding: 20px;
+  background: #1f2937;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  background: #111827;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: right;
+  min-height: 90px;
+  overflow: hidden;
+}
+
+.history { color: #9ca3af; font-size: 14px; min-height: 20px; }
+.current { color: #fff; font-size: 36px; margin-top: 8px; word-wrap: break-word; }
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  padding: 18px 0;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #374151;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.08s, filter 0.15s;
+}
+.key:hover { filter: brightness(1.2); }
+.key:active { transform: scale(0.95); }
+
+.key.fn { background: #6b7280; }
+.key.op { background: #f59e0b; }
+.key.eq { background: #10b981; }
+.key.zero { grid-column: span 2; }
